@@ -22,7 +22,13 @@ Root directory: /
 After deployment, the stable update manifest will be available at:
 
 ```text
-https://<cloudflare-pages-project>.pages.dev/stable/update.json
+https://gog-sing-box-launcher.pages.dev/stable/update.json
+```
+
+Current production Cloudflare Pages endpoint:
+
+```text
+https://gog-sing-box-launcher.pages.dev
 ```
 
 ## Update Layout
@@ -55,4 +61,3 @@ The intended production updater model is:
 9. Roll back automatically if verification fails.
 
 Private signing keys must never be committed to this repository.
-

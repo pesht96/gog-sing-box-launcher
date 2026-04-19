@@ -9,7 +9,7 @@ Use this repository as a static Cloudflare Pages deployment.
 3. Choose `Pages`.
 4. Choose `Create application`.
 5. Choose `Connect to Git`.
-6. Select the GitHub repository `pesth96/gog-sing-box-launcher`.
+6. Select the GitHub repository `pesht96/gog-sing-box-launcher`.
 7. Use these build settings:
 
 ```text
@@ -24,7 +24,13 @@ Root directory: /
 10. Verify that this endpoint returns JSON:
 
 ```text
-https://<cloudflare-pages-project>.pages.dev/stable/update.json
+https://gog-sing-box-launcher.pages.dev/stable/update.json
+```
+
+Current deployed Pages endpoint:
+
+```text
+https://gog-sing-box-launcher.pages.dev
 ```
 
 ## Current State
@@ -33,4 +39,3 @@ The current manifest is a placeholder. It does not publish an installable
 package yet. This is intentional: the GOG router updater should first be
 implemented and tested against a no-update manifest before real packages are
 published.
-
