@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "channel": "stable",
+  "version": "v1.82-sb1137",
+  "compatibility": "sb1137",
+  "released_at": "2026-04-19T00:00:00Z",
+  "update_kind": "none",
+  "restart_required": false,
+  "auto_install_allowed": false,
+  "package_url": "",
+  "package_sha256": "",
+  "package_size": 0,
+  "notes": "Initial Cloudflare Pages update endpoint placeholder. No update package is published yet."
+}
+

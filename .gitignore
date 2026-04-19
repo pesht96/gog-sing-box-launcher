@@ -1,0 +1,12 @@
+# Local/editor files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Secrets must stay local.
+*.sec
+*.key
+secrets/
+private/
+

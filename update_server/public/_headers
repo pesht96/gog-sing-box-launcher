@@ -1,0 +1,9 @@
+/stable/update.json
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/stable/update.json.sig
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/stable/packages/*
+  Cache-Control: public, max-age=31536000, immutable
+
