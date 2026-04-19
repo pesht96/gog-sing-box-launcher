@@ -3,10 +3,10 @@
 Thumbs.db
 *.tmp
 *.bak
+backup/
 
 # Secrets must stay local.
 *.sec
 *.key
 secrets/
 private/
-
