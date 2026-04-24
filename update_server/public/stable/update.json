@@ -1,15 +1,15 @@
 {
-  "schema": 1,
-  "channel": "stable",
-  "version": "v1.99-sb1137",
-  "min_supported_version": "v1.82-sb1137",
-  "compatibility": "sb1137",
-  "released_at": "2026-04-24T19:18:39Z",
-  "update_kind": "control_plane",
-  "restart_required": false,
-  "auto_install_allowed": true,
-  "package_url": "https://raw.githubusercontent.com/pesht96/gog-sing-box-launcher/main/update_server/public/stable/packages/gog-update-v1.99-sb1137.tar.gz",
-  "package_sha256": "c3857a597ef7402937a3a1c7431280f8f8aa3d5c20530fce85e1f6beae0f9733",
-  "package_size": 68446,
-  "notes_url": "https://raw.githubusercontent.com/pesht96/gog-sing-box-launcher/main/update_server/public/stable/releases/v1.99-sb1137/notes.txt"
+    "schema":  1,
+    "channel":  "stable",
+    "version":  "v2.00-sb1137",
+    "min_supported_version":  "v1.82-sb1137",
+    "compatibility":  "sb1137",
+    "released_at":  "2026-04-24T19:37:13Z",
+    "update_kind":  "control_plane",
+    "restart_required":  false,
+    "auto_install_allowed":  true,
+    "package_url":  "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.00-sb1137.tar.gz",
+    "package_sha256":  "d82eac3264a89fa99fc4f857cda8d2e8459e977f4b3bc596ea45522b925121b5",
+    "package_size":  68684,
+    "notes_url":  "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.00-sb1137/notes.txt"
 }
