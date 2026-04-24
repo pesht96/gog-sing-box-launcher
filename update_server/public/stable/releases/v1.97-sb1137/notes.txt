@@ -1,0 +1,7 @@
+GOG Sing-Box Launcher v1.97-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This package is generated for the remote update pipeline. Publish only after
+the router-side updater has passed the required verification gates.

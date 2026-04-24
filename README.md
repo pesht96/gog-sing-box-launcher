@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v1.96-sb1137`
+Current stable baseline: `v1.97-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,26 +41,26 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v1.96-sb1137.tar.gz
-      gog-update-v1.96-sb1137.tar.gz.sha256
+      gog-update-v1.97-sb1137.tar.gz
+      gog-update-v1.97-sb1137.tar.gz.sha256
     releases/
-      v1.96-sb1137/
+      v1.97-sb1137/
         notes.txt
 ```
 
 `update.json` is the current signed stable manifest. It currently publishes a
-signed `control_plane` package for `v1.96-sb1137`.
+signed `control_plane` package for `v1.97-sb1137`.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v1.96-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v1.97-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v1.96-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v1.97-sb1137/notes.txt
 ```
 
 ## Security Model
