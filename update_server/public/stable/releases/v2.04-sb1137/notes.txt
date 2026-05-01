@@ -1,0 +1,18 @@
+GOG Sing-Box Launcher v2.04-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+Fixes VLESS Reality no-flow compatibility.
+
+GOG no longer injects `xtls-rprx-vision` just because a VLESS Reality link has
+Reality parameters such as `pbk`. The generated sing-box outbound now preserves
+`flow` only when the source share-link explicitly provides it.
+
+This keeps explicit Vision links working while allowing non-Vision Reality
+servers to run correctly on the router. The live proof for this release applied
+the user's one-node Reality subscription through the normal CGI path and ended
+`running / probe_state=ok`, with YouTube and gstatic probes succeeding.
+
+This release also keeps the v2.02 xhttp Reality diagnostic and the v2.03
+operator-preemption lock fix.
