@@ -1,0 +1,13 @@
+GOG Sing-Box Launcher v2.05-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This stable update publishes the modern sing-box URI compatibility pass. The
+common preview/cache/config path now accepts VLESS, VLESS + Reality, Trojan,
+VMess, Shadowsocks, SOCKS, Hysteria2/hy2, TUIC, and AnyTLS links.
+
+The v2.04 VLESS Reality no-flow fix is preserved: GOG writes `flow` only when
+the share-link explicitly provides it. Raw HTTP proxy URI, WireGuard endpoint,
+ShadowTLS topology guessing, legacy Hysteria v1, and arbitrary JSON snippets
+remain intentionally unsupported.
