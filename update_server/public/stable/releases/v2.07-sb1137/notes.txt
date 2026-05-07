@@ -1,0 +1,18 @@
+GOG Sing-Box Launcher v2.07-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This stable control-plane update keeps the ordinary sing-box-only baseline and
+adds read-only operator visibility for the selected runtime pool:
+
+- per-server latency badges in the server list;
+- a manual Ping button;
+- best-pool advice based on measured runtime outbounds.
+
+The update does not bundle VPN subscriptions and does not replace each
+router's source URL, selected nodes, manual domains, or routing settings.
+
+Live proof before publication: current-payload Apply, sing-box check,
+action=latency, rendered DOM badges/pool advice, health/UI/stress, and final
+running / probe_state=ok.

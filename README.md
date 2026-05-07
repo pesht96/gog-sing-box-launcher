@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.06-sb1137`
+Current stable baseline: `v2.07-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,34 +41,32 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.06-sb1137.tar.gz
-      gog-update-v2.06-sb1137.tar.gz.sha256
+      gog-update-v2.07-sb1137.tar.gz
+      gog-update-v2.07-sb1137.tar.gz.sha256
     releases/
-      v2.06-sb1137/
+      v2.07-sb1137/
         notes.txt
 ```
 
 `update.json` is the current signed stable manifest. It currently publishes a
-signed `control_plane` package for `v2.06-sb1137`.
+signed `control_plane` package for `v2.07-sb1137`.
 
-Current stable release note: this update keeps the `v2.02` narrow
-unsupported-core xhttp diagnostic, the `v2.03` operator-preemption lock fix,
-the `v2.04` VLESS Reality no-flow compatibility fix, and the `v2.05` modern
-URI compatibility pass. It now filters unsupported `xhttp/splithttp` VLESS,
-Trojan, and VMess rows for sing-box 1.13.7 and keeps manual Apply on cached
-source/Re:filter data when the operator is changing selection for an unchanged
-provider URL.
+Current stable release note: this update keeps the `v2.06` selected-pool
+stability and cached manual Apply behavior, and adds read-only operator
+visibility for the selected runtime pool: per-server latency badges, a `Пинг`
+button, and best-pool advice. It does not bundle VPN subscriptions and does
+not replace each router's source URL, selected nodes, or routing settings.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.06-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.07-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.06-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.07-sb1137/notes.txt
 ```
 
 ## Security Model
