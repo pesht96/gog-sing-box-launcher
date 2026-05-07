@@ -1,15 +1,15 @@
 {
     "schema":  1,
     "channel":  "stable",
-    "version":  "v2.07-sb1137-xray",
+    "version":  "v2.06-sb1137",
     "min_supported_version":  "v1.82-sb1137",
     "compatibility":  "sb1137",
-    "released_at":  "2026-05-06T22:11:13Z",
+    "released_at":  "2026-05-03T21:05:56Z",
     "update_kind":  "control_plane",
     "restart_required":  false,
-    "auto_install_allowed":  false,
-    "package_url":  "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.07-sb1137-xray.tar.gz",
-    "package_sha256":  "956986c85488a1301422c2d2bc0ad15fef0210ecf02a9e98a0f765ad706a69c7",
-    "package_size":  20139783,
-    "notes_url":  "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.07-sb1137-xray/notes.txt"
+    "auto_install_allowed":  true,
+    "package_url":  "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.06-sb1137.tar.gz",
+    "package_sha256":  "361231108df0a9e28ef0dfe28417e637e0d3fef674e7be4f3ddada711e90a654",
+    "package_size":  72786,
+    "notes_url":  "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.06-sb1137/notes.txt"
 }
