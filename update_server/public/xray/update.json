@@ -1,15 +1,15 @@
 {
-  "schema": 1,
-  "channel": "xray",
-  "version": "v2.09-xray-only",
-  "min_supported_version": "v2.09-xray-only",
-  "compatibility": "xray-only",
-  "released_at": "2026-05-14T19:35:57Z",
-  "update_kind": "none",
-  "restart_required": false,
-  "auto_install_allowed": false,
-  "package_url": "",
-  "package_sha256": "",
-  "package_size": 0,
-  "notes_url": "https://gog-sing-box-launcher.pages.dev/xray/releases/v2.09-xray-only/notes.txt"
+    "schema":  1,
+    "channel":  "xray",
+    "version":  "v2.09-xray-only",
+    "min_supported_version":  "v2.09-xray-only",
+    "compatibility":  "xray-only",
+    "released_at":  "2026-05-14T19:56:24Z",
+    "update_kind":  "none",
+    "restart_required":  false,
+    "auto_install_allowed":  false,
+    "package_url":  "",
+    "package_sha256":  "",
+    "package_size":  0,
+    "notes_url":  "https://gog-sing-box-launcher.pages.dev/xray/releases/v2.09-xray-only/notes.txt"
 }
