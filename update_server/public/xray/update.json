@@ -4,7 +4,7 @@
   "version": "v2.09-xray-only",
   "min_supported_version": "v2.09-xray-only",
   "compatibility": "xray-only",
-  "released_at": "2026-05-14T19:23:17Z",
+  "released_at": "2026-05-14T19:35:57Z",
   "update_kind": "none",
   "restart_required": false,
   "auto_install_allowed": false,
