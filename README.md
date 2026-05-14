@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.07-sb1137`
+Current stable baseline: `v2.09-xray-only`
 
 ## Cloudflare Pages
 
@@ -41,32 +41,47 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.07-sb1137.tar.gz
-      gog-update-v2.07-sb1137.tar.gz.sha256
+      gog-update-v2.09-xray-only-migration.tar.gz
+      gog-update-v2.09-xray-only-migration.tar.gz.sha256
     releases/
-      v2.07-sb1137/
+      v2.09-xray-only/
+        notes.txt
+  xray/
+    update.json
+    update.json.sig
+    releases/
+      v2.09-xray-only/
         notes.txt
 ```
 
 `update.json` is the current signed stable manifest. It currently publishes a
-signed `control_plane` package for `v2.07-sb1137`.
+signed manual `control_plane` bridge package that lets ordinary
+`v2.07-sb1137` routers migrate to the Xray-only runtime.
 
-Current stable release note: this update keeps the `v2.06` selected-pool
-stability and cached manual Apply behavior, and adds read-only operator
-visibility for the selected runtime pool: per-server latency badges, a `Пинг`
-button, and best-pool advice. It does not bundle VPN subscriptions and does
-not replace each router's source URL, selected nodes, or routing settings.
+Current stable release note: this update preserves each router's saved
+subscription and settings, stops the old sing-box runtime, installs bundled
+Xray and lite Re:filter assets, rebuilds runtime from the saved payload,
+validates Xray, and then moves future update checks to the Xray-only
+compatibility line. The bridge is manual-only; operators should wait a minute
+or two and refresh the UI if the old updater appears to time out during the
+core replacement.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.07-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.09-xray-only-migration.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.07-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.09-xray-only/notes.txt
+```
+
+Migrated Xray-only routers continue on:
+
+```text
+https://gog-sing-box-launcher.pages.dev/xray/update.json
 ```
 
 ## Security Model

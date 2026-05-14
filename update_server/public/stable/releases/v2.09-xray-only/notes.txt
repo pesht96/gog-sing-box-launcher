@@ -1,0 +1,12 @@
+GOG Xray-only migration v2.09-xray-only
+
+This public manual update migrates ordinary GOG sing-box v2.07-sb1137 routers
+to the Xray-only runtime. It preserves each router's saved subscription and
+settings, stops the old sing-box runtime, installs bundled Xray and lite
+Re:filter assets, rebuilds the runtime from the saved payload, validates Xray,
+and leaves future update checks on the Xray-only manifest line.
+
+During this migration the old updater may appear to time out because the core
+replacement can take longer than the old HTTP request lifetime on weak routers.
+Wait a minute or two, refresh the page, and confirm the app reports
+v2.09-xray-only / no_update.
