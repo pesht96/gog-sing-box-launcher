@@ -1,15 +1,15 @@
 {
-    "schema":  1,
-    "channel":  "stable",
-    "version":  "v2.09-xray-only",
-    "min_supported_version":  "v2.07-sb1137",
-    "compatibility":  "sb1137",
-    "released_at":  "2026-05-14T19:56:24Z",
-    "update_kind":  "control_plane",
-    "restart_required":  false,
-    "auto_install_allowed":  false,
-    "package_url":  "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.09-xray-only-migration.tar.gz",
-    "package_sha256":  "bb4f2dbd4785ea952dfc53a673aaef39b82a47427f6617cb6f47ec07b248211b",
-    "package_size":  19469357,
-    "notes_url":  "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.09-xray-only/notes.txt"
+  "schema": 1,
+  "channel": "stable",
+  "version": "v2.10-xray-only",
+  "min_supported_version": "v2.07-sb1137",
+  "compatibility": "sb1137",
+  "released_at": "2026-05-15T20:44:54Z",
+  "update_kind": "control_plane",
+  "restart_required": false,
+  "auto_install_allowed": false,
+  "package_url": "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.10-xray-only-migration.tar.gz",
+  "package_sha256": "52448441cd0aac0d7908e3920729a112bfc4fac00074ab4ed325cb7c4a3ead1c",
+  "package_size": 19469833,
+  "notes_url": "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.10-xray-only/notes.txt"
 }

@@ -1,0 +1,1 @@
+GOG Xray-only v2.10-xray-only provider JSON / XHTTP-TLS subscription import fix. This control-plane update keeps saved subscriptions and settings, then rebuilds runtime from preserved state.
