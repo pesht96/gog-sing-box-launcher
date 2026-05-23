@@ -1,0 +1,15 @@
+GOG Sing-Box Launcher v2.09-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This update adds narrow Naive outbound support to the ordinary sing-box-only
+GOG baseline.
+
+The source field now accepts inline naive:// rows and remote sing-box JSON when
+recognized outbounds[].type == "naive" rows can be normalized into GOG's common
+preview/cache/apply/cron model.
+
+This is an application/control-plane update only. It preserves each router's
+saved subscription, selected nodes, manual domains, routing settings, and VPN
+credentials.
