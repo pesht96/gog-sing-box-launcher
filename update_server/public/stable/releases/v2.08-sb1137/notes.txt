@@ -1,0 +1,12 @@
+GOG Sing-Box Launcher v2.08-sb1137
+
+This ordinary sing-box control-plane update adds a narrow crypto-services
+route preset to the existing foreign-services option.
+
+Trust Wallet, Bybit, and MEXC service domains are now routed through
+AUTO-BALANCE when foreign-services routing is enabled. The same route works for
+Android and iPhone clients that use the router as their gateway.
+
+The update does not bundle VPN servers, does not replace the saved
+subscription URL, does not change selected nodes, and does not alter manual
+domains or routing settings already stored on the router.
