@@ -1,0 +1,22 @@
+GOG Sing-Box Launcher v2.19-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This update preserves each router's saved subscription, selected nodes, manual
+domains, and routing settings. It updates only the ordinary sing-box
+application/control-plane.
+
+v2.18 adds a narrow client-side Private DNS guard for LAN traffic handled by
+GOG's TUN path. DoT 853, common DoH resolver domains, and common resolver IPs
+on 443 are rejected for client inbound traffic so browsers and phones do not
+quietly bypass the router DNS policy.
+
+v2.19 adds IPv6 DNS hijack support for the IPv4-only TUN baseline and rejects
+non-DNS IPv6 immediately after DNS hijack. This reduces IPv6 fallback delay
+without enabling full IPv6 proxy egress through outbounds that have not been
+proved safe for IPv6.
+
+Live verification passed on the target router: running / probe_state=ok,
+selected/server truth 3/3, active GOG Naive SE, empty last_error, sing-box
+check=0, UI footer v2.19-sb1137, and release stress 12/12.
