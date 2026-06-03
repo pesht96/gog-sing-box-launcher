@@ -1,0 +1,30 @@
+GOG Sing-Box Launcher v2.17-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This update preserves each router's saved subscription, selected nodes, manual
+domains, and settings. It only updates the ordinary sing-box
+application/control-plane.
+
+This release fixes the next YouTube router-path symptom after v2.16. The
+dependency route layer was already present, but the active-node selector still
+used a generic Cloudflare short download test. On the live router, the
+Cloudflare path and YouTube path ranked selected nodes differently.
+
+Changes in v2.17:
+
+- The `Пинг` / `latency` action now keeps the lightweight YouTube 204 latency
+  target but uses a bounded YouTube watch/page download probe instead of
+  `speed.cloudflare.com`.
+- Existing selector safety remains unchanged: the action does not rewrite
+  subscriptions, selected ids, payload/settings, quarantine, route rules, or
+  manual domains.
+- Existing weak-router caps remain unchanged: dependency auto-route threshold
+  two hits, 12 auto-routed domains per service, and 48 candidates per service.
+
+Live proof ended running / probe_state=ok, selected/server truth 3/3, active
+GOG Naive SE, empty last_error, sing-box check=0, YouTube watch/page probes
+around 1.5 MB/s through the active AUTO-BALANCE path, clean rendered UI, clean
+release stress 12/12, verified public signature, and router
+update_check=no_update.
