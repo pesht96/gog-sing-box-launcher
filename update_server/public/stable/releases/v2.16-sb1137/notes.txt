@@ -3,5 +3,28 @@ GOG Sing-Box Launcher v2.16-sb1137
 Update kind: control_plane
 Compatibility: sb1137
 
-This package is generated for the remote update pipeline. Publish only after
-the router-side updater has passed the required verification gates.
+This update preserves each router's saved subscription, selected nodes, manual
+domains, and settings. It only updates the ordinary sing-box
+application/control-plane.
+
+This release treats the user's phone/mobile-client comparison as router-path
+evidence: when the same nodes are fast off-router, GOG must inspect TUN, DNS,
+route coverage, helper domains, selector truth, and QUIC/UDP behavior before
+blaming provider node speed.
+
+Changes in v2.16:
+
+- Adds live-confirmed YouTube helper route seeds:
+  youtubei-att.googleapis.com, youtubeembeddedplayer.googleapis.com,
+  jnn-pa.googleapis.com, play.google.com, and
+  suggestqueries-clients6.youtube.com.
+- Lowers the bounded dependency auto-route threshold to two independent hits.
+- Keeps weak-router caps: 12 auto-routed dependency domains per service and 48
+  candidates per service.
+- Keeps raw IPv4 literals out of domain route memory and keeps
+  speed.cloudflare.com classified as GOG speed-probe noise.
+- Runs bounded dependency maintenance every two hours.
+
+Live proof ended running / probe_state=ok, selected/server truth 3/3, empty
+last_error, sing-box check=0, clean rendered UI, clean release stress, verified
+public signature, and router update_check=no_update.
