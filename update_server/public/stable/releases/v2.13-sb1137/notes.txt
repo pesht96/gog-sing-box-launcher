@@ -1,0 +1,21 @@
+GOG Sing-Box Launcher v2.13-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This update improves the ordinary sing-box GOG runtime selector for slow
+YouTube / foreign-service cases.
+
+Changes:
+- `Ping` now also performs a short download probe and shows compact speed
+  badges such as `347 ms 640K/s`.
+- `AUTO-BALANCE` follows the best successful download score when available,
+  instead of using only a short 204 latency check.
+- Split/proxy routing rejects UDP/443 so browsers fall back from QUIC to TCP
+  when UDP proxying causes buffering.
+- Manual domains and service-dependency review memory now discard IPv4
+  literals, preventing stale IPs from being routed as fake domain suffixes.
+
+The package updates only GOG application/control-plane files. It does not
+bundle, replace, or publish operator VPN subscriptions, selected nodes, or
+private server credentials.
