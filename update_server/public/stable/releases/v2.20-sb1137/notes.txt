@@ -1,0 +1,17 @@
+GOG Sing-Box Launcher v2.20-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This update preserves each router's saved subscription, selected nodes, manual
+domains, and routing settings.
+
+The fix keeps DNS hijack first in the TUN route path, rejects non-DNS IPv6
+quickly, then runs a TCP-only sing-box route sniff before service-domain rules.
+That helps LAN clients whose HTTPS traffic reaches the router as IP:443 after
+local DNS cache or app-private resolving, while keeping UDP/443 QUIC fallback
+fast and avoiding broad Google/CDN/IP routing.
+
+Live proof on the target router passed sing-box check, health, rendered UI, and
+the non-mutating release stress baseline. The active selected path remained the
+operator's Naive node after the latency check.

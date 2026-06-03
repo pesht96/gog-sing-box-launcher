@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.17-sb1137`
+Current stable baseline: `v2.20-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.19-sb1137.tar.gz
-      gog-update-v2.19-sb1137.tar.gz.sha256
+      gog-update-v2.20-sb1137.tar.gz
+      gog-update-v2.20-sb1137.tar.gz.sha256
     releases/
-      v2.19-sb1137/
+      v2.20-sb1137/
         notes.txt
   xray/
     update.json
@@ -68,18 +68,22 @@ speed to a bounded YouTube watch/page path, so the `Пинг` action chooses the
 runtime `AUTO-BALANCE` node by the service path that was actually lagging.
 `v2.18-sb1137` adds a narrow client-side Private DNS guard for DoT/DoH bypass
 attempts, and `v2.19-sb1137` adds IPv6 DNS hijack plus fast non-DNS IPv6 reject
-for the IPv4-only TUN baseline. It does not enable full IPv6 proxy egress.
+for the IPv4-only TUN baseline. `v2.20-sb1137` keeps DNS hijack and IPv6 reject
+fast, then runs TCP-only route sniff before service-domain routing so LAN/TUN
+clients that arrive as `IP:443` can still match YouTube/AI/social route rules.
+It does not enable full IPv6 proxy egress and does not add broad Google/CDN/IP
+routing.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.19-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.20-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.19-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.20-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:
