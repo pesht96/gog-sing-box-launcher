@@ -1,0 +1,22 @@
+GOG Sing-Box Launcher v2.15-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This release preserves each router's saved subscription, selected nodes,
+manual domains, and settings. It only updates the ordinary sing-box
+application/control-plane.
+
+Changes:
+
+- expands the bounded service-core route layer for YouTube, ChatGPT, Gemini,
+  Telegram, Instagram, and X;
+- routes the new service helper domains through AUTO-BALANCE and proxy-dns
+  when the corresponding existing routing preset is enabled;
+- keeps learned dependency domains capped and sanitized;
+- filters GOG's own speed probe host speed.cloudflare.com so it is not learned
+  or routed as a false YouTube dependency.
+
+The live proof for this version ended with running / probe_state=ok, three
+selected nodes preserved, active GOG Naive SE, empty last_error, clean
+health/UI/stress, and no seeded-test dependency state left on the router.
