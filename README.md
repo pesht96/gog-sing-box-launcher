@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.26-sb1137`
+Current stable baseline: `v2.27-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.26-sb1137.tar.gz
-      gog-update-v2.26-sb1137.tar.gz.sha256
+      gog-update-v2.27-sb1137.tar.gz
+      gog-update-v2.27-sb1137.tar.gz.sha256
     releases/
-      v2.26-sb1137/
+      v2.27-sb1137/
         notes.txt
   xray/
     update.json
@@ -55,26 +55,30 @@ update_server/public/
 ```
 
 `stable/update.json` is the current signed ordinary sing-box manifest. It
-publishes a signed `runtime_config` package for the `sb1137` compatibility line.
+publishes a signed `control_plane` package for the `sb1137` compatibility line.
+The package still performs a bounded current-payload runtime reapply when GOG
+was already running before update.
 
 Current stable release note: this update preserves each router's saved
-subscription, selected nodes, manual domains, and settings. `v2.26-sb1137`
-keeps the weak-router DNS fixes from `v2.25` and adds a runtime-state guard:
-stale manual-stop flags are ignored and cleared when `sing-box` and `tun0` are
-already alive, and watchdog can attribute tagged active outbound failures such
-as `outbound/vless[srv-*] ... dial tcp ... timeout` to the concrete selected
-server id instead of leaving them as unattributed proxy failures.
+subscription, selected nodes, manual domains, and settings. `v2.27-sb1137`
+adds the requested TikTok/ByteDance route seed to the existing
+`Иностранные сервисы` preset, so those service domains use `AUTO-BALANCE` and
+`proxy-dns` when that preset is enabled. The list is embedded in the program
+and is not fetched from GitHub during router Apply. The same release also
+allows manual install of signed `runtime_config` updates in the updater gate
+and shows an immediate installing state in the UI. The public remedial package
+is published as `control_plane` so older `v2.25` routers can install it.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.26-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.27-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.26-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.27-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:

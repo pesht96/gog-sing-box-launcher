@@ -1,15 +1,15 @@
 {
     "schema":  1,
     "channel":  "stable",
-    "version":  "v2.26-sb1137",
+    "version":  "v2.27-sb1137",
     "min_supported_version":  "v1.82-sb1137",
     "compatibility":  "sb1137",
-    "released_at":  "2026-06-04T16:13:17Z",
-    "update_kind":  "runtime_config",
+    "released_at":  "2026-06-04T17:51:36Z",
+    "update_kind":  "control_plane",
     "restart_required":  false,
     "auto_install_allowed":  true,
-    "package_url":  "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.26-sb1137.tar.gz",
-    "package_sha256":  "2ad8406ba1a5e6d27bc6342924646dae5dcc0e6f8d6be721a217dff14b74e5f7",
-    "package_size":  86169,
-    "notes_url":  "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.26-sb1137/notes.txt"
+    "package_url":  "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.27-sb1137.tar.gz",
+    "package_sha256":  "77c803e443e5e41bc27536ab97922378efaddead5aa20c953b717bd4a3d11943",
+    "package_size":  91633,
+    "notes_url":  "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.27-sb1137/notes.txt"
 }
