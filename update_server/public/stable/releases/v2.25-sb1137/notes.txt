@@ -1,0 +1,25 @@
+GOG Sing-Box Launcher v2.25-sb1137
+
+Update kind: runtime_config
+Compatibility: sb1137
+
+This release fixes the weak-router DNS path where Telegram or cached/IP-based
+traffic could still work while YouTube and other domain-routed services stalled.
+
+The package preserves each router's own subscription, selected nodes, manual
+domains, route toggles, and Re:filter state. It updates the ordinary sing-box
+application/control-plane and, when GOG was already running before update,
+refreshes the generated sing-box runtime config through the saved payload so
+the DNS fix takes effect immediately.
+
+Key runtime fixes:
+
+- proxy-dns now uses IP-literal DoH to 8.8.8.8:443 with Host/SNI dns.google;
+- explicit port 53 DNS hijack is generated before broad private-IP direct rules;
+- gog-proxy-start installs nft return rules for LAN DNS addressed to the router
+  itself, so clients using 192.168.1.1 still reach dnsmasq.
+
+Live proof before publication: footer v2.25-sb1137, running/probe_state=ok,
+selected/server truth 3/3 on the test router, last_error empty, one sing-box
+PID, tun0 up, router-side YouTube and gstatic generate_204 probes returning
+204, and release stress 12/12 clean.

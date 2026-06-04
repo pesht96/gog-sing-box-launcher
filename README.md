@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.21-sb1137`
+Current stable baseline: `v2.25-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.21-sb1137.tar.gz
-      gog-update-v2.21-sb1137.tar.gz.sha256
+      gog-update-v2.25-sb1137.tar.gz
+      gog-update-v2.25-sb1137.tar.gz.sha256
     releases/
-      v2.21-sb1137/
+      v2.25-sb1137/
         notes.txt
   xray/
     update.json
@@ -55,39 +55,29 @@ update_server/public/
 ```
 
 `stable/update.json` is the current signed ordinary sing-box manifest. It
-publishes a signed `control_plane` package for the `sb1137` compatibility line.
+publishes a signed `runtime_config` package for the `sb1137` compatibility line.
 
 Current stable release note: this update preserves each router's saved
-subscription, selected nodes, manual domains, and settings. It only updates the
-ordinary sing-box application/control-plane. `v2.16-sb1137` expands the
-live-confirmed YouTube helper route seeds, lets the bounded dependency layer
-promote repeated exact-domain evidence after two independent hits, keeps caps
-for weak routers, and runs the maintenance scan every two hours. `v2.17-sb1137`
-then changes the active-node selector download probe from generic Cloudflare
-speed to a bounded YouTube watch/page path, so the `Пинг` action chooses the
-runtime `AUTO-BALANCE` node by the service path that was actually lagging.
-`v2.18-sb1137` adds a narrow client-side Private DNS guard for DoT/DoH bypass
-attempts, and `v2.19-sb1137` adds IPv6 DNS hijack plus fast non-DNS IPv6 reject
-for the IPv4-only TUN baseline. `v2.20-sb1137` keeps DNS hijack and IPv6 reject
-fast, then runs TCP-only route sniff before service-domain routing so LAN/TUN
-clients that arrive as `IP:443` can still match YouTube/AI/social route rules.
-It does not enable full IPv6 proxy egress and does not add broad Google/CDN/IP
-routing. `v2.21-sb1137` fixes the watchdog direct-probe guard: `www.gstatic.com`
-is no longer used as a direct health target because it may legitimately route
-through the proxy as a YouTube/Google helper domain. Watchdog now records
-`direct_failed` on a live process plus `tun0` without restarting runtime, while
-proxy-failure and missing-runtime recovery stay unchanged.
+subscription, selected nodes, manual domains, and settings. `v2.25-sb1137`
+fixes the weak-router DNS path that could leave YouTube and other
+domain-routed services stalled even while Telegram or cached/IP traffic still
+worked. The package updates the ordinary sing-box application/control-plane and
+refreshes the generated runtime config when GOG was already running before the
+update, so the new DNS rules take effect immediately. The DNS fix uses
+IP-literal DoH to `8.8.8.8:443` with Host/SNI `dns.google`, keeps port-53
+hijack before broad private-IP direct routing, and installs nft return rules so
+LAN clients using router DNS still reach dnsmasq on `192.168.1.1`.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.21-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.25-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.21-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.25-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:
