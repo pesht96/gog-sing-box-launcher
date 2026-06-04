@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.25-sb1137`
+Current stable baseline: `v2.26-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.25-sb1137.tar.gz
-      gog-update-v2.25-sb1137.tar.gz.sha256
+      gog-update-v2.26-sb1137.tar.gz
+      gog-update-v2.26-sb1137.tar.gz.sha256
     releases/
-      v2.25-sb1137/
+      v2.26-sb1137/
         notes.txt
   xray/
     update.json
@@ -58,26 +58,23 @@ update_server/public/
 publishes a signed `runtime_config` package for the `sb1137` compatibility line.
 
 Current stable release note: this update preserves each router's saved
-subscription, selected nodes, manual domains, and settings. `v2.25-sb1137`
-fixes the weak-router DNS path that could leave YouTube and other
-domain-routed services stalled even while Telegram or cached/IP traffic still
-worked. The package updates the ordinary sing-box application/control-plane and
-refreshes the generated runtime config when GOG was already running before the
-update, so the new DNS rules take effect immediately. The DNS fix uses
-IP-literal DoH to `8.8.8.8:443` with Host/SNI `dns.google`, keeps port-53
-hijack before broad private-IP direct routing, and installs nft return rules so
-LAN clients using router DNS still reach dnsmasq on `192.168.1.1`.
+subscription, selected nodes, manual domains, and settings. `v2.26-sb1137`
+keeps the weak-router DNS fixes from `v2.25` and adds a runtime-state guard:
+stale manual-stop flags are ignored and cleared when `sing-box` and `tun0` are
+already alive, and watchdog can attribute tagged active outbound failures such
+as `outbound/vless[srv-*] ... dial tcp ... timeout` to the concrete selected
+server id instead of leaving them as unattributed proxy failures.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.25-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.26-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.25-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.26-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:
