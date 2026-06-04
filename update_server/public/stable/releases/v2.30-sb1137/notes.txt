@@ -1,0 +1,20 @@
+GOG Sing-Box Launcher v2.30-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This update preserves each router's saved subscription, selected nodes, manual
+domains, and routing/settings state.
+
+Changes:
+
+- Manual update install now shows visible operator feedback after confirming
+  `Установить`.
+- The UI displays a progress block with percent and current stage while the
+  router downloads, backs up, extracts, applies, and verifies the package.
+- Check/install/rollback buttons stay disabled while install is busy.
+- `update_status` now carries `update_progress` and `update_stage`, so a reload
+  or poll can still show that installation is in progress.
+
+The signed package trust model, SHA/size verification, backup, rollback, and
+post-update runtime verification paths are preserved.

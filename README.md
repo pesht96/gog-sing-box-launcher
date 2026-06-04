@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.29-sb1137`
+Current stable baseline: `v2.30-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.29-sb1137.tar.gz
-      gog-update-v2.29-sb1137.tar.gz.sha256
+      gog-update-v2.30-sb1137.tar.gz
+      gog-update-v2.30-sb1137.tar.gz.sha256
     releases/
-      v2.29-sb1137/
+      v2.30-sb1137/
         notes.txt
   xray/
     update.json
@@ -62,26 +62,24 @@ package still performs a bounded current-payload runtime reapply when GOG was
 already running before update.
 
 Current stable release note: this update preserves each router's saved
-subscription, selected nodes, manual domains, and settings. `v2.29-sb1137`
-fixes the proxy-health and active-selector failure where routed services could
-timeout while GOG still reported `running / probe_state=ok`. Proxy health now
-requires a real successful HTTP probe plus proxy log evidence, start/apply/cron
-can softly repair `AUTO-BALANCE` with the existing speed-aware selector after
-an initial `proxy_failed`, and automatic quarantine of the selected pool is
-disabled unless explicitly enabled for a separate proof run. The package is
-published as `control_plane` with `auto_install_allowed=true`, so routers can
-install it manually or through the existing auto-install path.
+subscription, selected nodes, manual domains, and settings. `v2.30-sb1137`
+adds visible manual-update install progress after the operator confirms
+`Установить`: the UI shows percent/stage feedback, disables update action
+buttons while install is busy, and the backend exposes `update_progress` and
+`update_stage` through `update_status`. The package is published as
+`control_plane` with `auto_install_allowed=true`, so routers can install it
+manually or through the existing auto-install path.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.29-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.30-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.29-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.30-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:
