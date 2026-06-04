@@ -1,0 +1,23 @@
+GOG Sing-Box Launcher v2.31-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This update preserves each router's saved subscription, selected nodes, manual
+domains, and settings.
+
+Changes:
+- Adds a service-aware dependency-review guard. Direct/RU/common
+  infrastructure domains can no longer be learned as TikTok or unrelated
+  service dependencies.
+- Keeps legitimate accepted YouTube helper domains and static proxy-service
+  presets intact.
+- Emits direct/RU DNS and route rules before broad proxy-domain rules, so old
+  dirty dependency/manual state cannot proxy direct-policy domains such as VK,
+  Ya.ru, or Apple direct targets.
+
+Validation:
+- Local modular build, verify-only, bash syntax check, local gate, and focused
+  dependency-classifier verifier passed.
+- Live router proof preserved the current private source and 3/3 selected
+  nodes, ended in running / probe_state=ok, and passed health/UI/stress.
