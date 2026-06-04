@@ -12,13 +12,15 @@ Changes:
   TikTok service domains are routed through AUTO-BALANCE and proxy-dns.
 - The TikTok list is embedded in the program and is not fetched from GitHub
   during router Apply, so weak routers do not depend on GitHub for startup.
-- Manual updater install now accepts signed runtime_config packages in
+- The updater install gate now accepts signed runtime_config packages in
   addition to signed control_plane packages, while still rejecting unsupported
   update kinds.
 - The UI now shows an immediate installing state and disables the install
   button while an update install request is running.
 
 This remedial public package is published as control_plane for compatibility
-with older v2.25 updater gates. If GOG was already running before update, the
-package still performs a bounded post-update reapply of the saved current
+with older v2.25 updater gates. The manifest has auto_install_allowed=true, so
+it can be installed manually or by the existing auto-install path when the
+operator has auto-install enabled. If GOG was already running before update,
+the package still performs a bounded post-update reapply of the saved current
 payload so generated runtime config receives the new routing logic.

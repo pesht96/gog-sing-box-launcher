@@ -1,0 +1,28 @@
+GOG Sing-Box Launcher v2.29-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+Auto install allowed: true
+
+This update preserves each router's saved subscription, selected nodes, manual
+domains, route toggles, Re:filter cache, and operator settings. It ships only
+application/control-plane code.
+
+Changes:
+- Proxy health no longer passes from proxy log markers alone. The proxy probe
+  must now complete a real HTTP request through the active selector and also
+  observe proxy activity in the runtime logs.
+- Start/apply/cron now try a soft selector repair after the first
+  `proxy_failed`: GOG keeps the just-started runtime alive, runs the existing
+  speed-aware latency/download selector, switches `AUTO-BALANCE` to a working
+  selected outbound, and repeats the connectivity probe.
+- Automatic quarantine of selected nodes is disabled by default. It only runs
+  when `GOG_ENABLE_AUTO_QUARANTINE=true`, so noisy log evidence cannot shrink
+  the operator-selected pool in the normal public path.
+
+Live proof covered router-side and ADB client matrices for YouTube/Google
+helpers, Telegram, ChatGPT/Gemini/Claude response paths, Instagram, X, TikTok,
+Trust Wallet, Bybit, MEXC, RU/direct, and ordinary direct targets. Final state:
+`running / probe_state=ok`, selected/server truth preserved, empty
+`last_error`, no quarantine, one `sing-box` process, `tun0` up, UI footer
+`v2.29-sb1137`, and release stress `12/12`.
