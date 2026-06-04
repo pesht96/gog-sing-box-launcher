@@ -1,0 +1,19 @@
+GOG Sing-Box Launcher v2.21-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This package is generated for the remote update pipeline. Publish only after
+the router-side updater has passed the required verification gates.
+
+Changes:
+
+Fixed the watchdog direct-probe guard. `www.gstatic.com` is no longer used as a
+direct health target because it may legitimately route through the proxy as a
+YouTube/Google helper domain. The direct probe now uses live-proved
+direct-clean targets, and watchdog records `direct_failed` on a live
+`sing-box` process plus `tun0` without restarting runtime.
+
+This update preserves each router's saved subscription, selected nodes, manual
+domains, dependency review state, and routing settings. It updates only the
+ordinary sing-box application/control-plane.
