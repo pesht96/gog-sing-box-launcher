@@ -1,0 +1,20 @@
+GOG Sing-Box Launcher v2.32-sb1137
+
+This control-plane update adds Discord to the bounded proxied-service route
+surface of the ordinary sing-box GOG baseline.
+
+When `Иностранные сервисы` or blocked/Re:filter routing is enabled, GOG now
+routes the Discord app, invite, CDN, and media suffixes through
+`AUTO-BALANCE` and `proxy-dns`:
+
+- discord.com
+- discord.gg
+- discordapp.com
+- discordapp.net
+- discordcdn.com
+- discord.media
+
+The update does not replace or publish user VPN subscriptions, selected nodes,
+manual domains, dependency-review choices, or route toggles. If GOG was
+already running, the package performs the existing bounded current-payload
+reapply so the generated sing-box config receives the new route rules.

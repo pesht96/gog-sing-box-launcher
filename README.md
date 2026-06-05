@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.31-sb1137`
+Current stable baseline: `v2.32-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.31-sb1137.tar.gz
-      gog-update-v2.31-sb1137.tar.gz.sha256
+      gog-update-v2.32-sb1137.tar.gz
+      gog-update-v2.32-sb1137.tar.gz.sha256
     releases/
-      v2.31-sb1137/
+      v2.32-sb1137/
         notes.txt
   xray/
     update.json
@@ -62,25 +62,24 @@ package still performs a bounded current-payload runtime reapply when GOG was
 already running before update.
 
 Current stable release note: this update preserves each router's saved
-subscription, selected nodes, manual domains, and settings. `v2.31-sb1137`
-adds a service-aware dependency-review guard so direct/RU/common
-infrastructure domains cannot be learned as TikTok or unrelated service
-dependencies. Direct/RU generated DNS and route rules now win before broad
-proxy-domain rules, while legitimate accepted YouTube helper domains and
-static proxy-service presets remain intact. The package is published as
+subscription, selected nodes, manual domains, and settings. `v2.32-sb1137`
+adds Discord to the bounded `Иностранные сервисы` and blocked/Re:filter
+service-core route surface. The supported Discord suffixes are
+`discord.com`, `discord.gg`, `discordapp.com`, `discordapp.net`,
+`discordcdn.com`, and `discord.media`. The package is published as
 `control_plane` with `auto_install_allowed=true`, so routers can install it
 manually or through the existing auto-install path.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.31-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.32-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.31-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.32-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:
