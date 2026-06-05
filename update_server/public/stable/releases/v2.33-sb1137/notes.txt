@@ -1,0 +1,16 @@
+GOG Sing-Box Launcher v2.33-sb1137
+
+This update preserves each router's saved subscription, selected nodes, manual
+domains, and settings.
+
+Changes:
+
+- Discord remains routed through the VPN path for RF users.
+- Discord voice gets a narrow `discord.media` UDP rule through `AUTO-BALANCE`
+  before the global UDP/443 reject.
+- No broad UDP catch-all rule is added.
+- Successful watchdog checks clear stale current `last_error` banners after
+  `watchdog ok`.
+
+The package is signed, uses compatibility line `sb1137`, and is published as
+`control_plane` with `auto_install_allowed=true`.
