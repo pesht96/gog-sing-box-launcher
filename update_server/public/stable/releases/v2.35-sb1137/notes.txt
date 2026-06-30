@@ -1,0 +1,18 @@
+GOG Sing-Box Launcher v2.35-sb1137
+
+This update fixes the operator manual-domain field under "Свой облачный список
+доменов".
+
+Before this release, a domain added through the local manual field could reach
+the generated runtime config and help routing immediately, while persisted
+settings and last_payload still saved manual_domains as an empty list. After a
+page reload the UI could therefore show "Список пока пуст", even though the
+current config still contained the temporary manual route.
+
+v2.35 preserves normalized manual_domains during apply-time selected-server
+sanitizing and commit. The field now round-trips through UI apply/reload,
+get_config, raw /etc/sing-box/myproxy_settings.json, raw
+/etc/sing-box/last_payload.json, and generated /etc/sing-box/config.json.
+
+The package does not contain user VPN sources, selected nodes, manual domains,
+or private node tokens. Existing router state is preserved.

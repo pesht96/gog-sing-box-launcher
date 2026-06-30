@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.34-sb1137`
+Current stable baseline: `v2.35-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.34-sb1137.tar.gz
-      gog-update-v2.34-sb1137.tar.gz.sha256
+      gog-update-v2.35-sb1137.tar.gz
+      gog-update-v2.35-sb1137.tar.gz.sha256
     releases/
-      v2.34-sb1137/
+      v2.35-sb1137/
         notes.txt
   xray/
     update.json
@@ -62,25 +62,23 @@ package still performs a bounded current-payload runtime reapply when GOG was
 already running before update.
 
 Current stable release note: this update preserves each router's saved
-subscription, selected nodes, manual domains, and settings. `v2.34-sb1137`
-adds the live-proved YouTube helper base suffix `googleusercontent.com` to the
-ordinary sing-box route and proxy-DNS core. Existing base suffixes already
-cover `youtube.com`, `ytimg.com`, `googlevideo.com`, `gstatic.com`,
-`googleapis.com`, and `ggpht.com`; wildcard literals are not emitted into
-`domain_suffix` config. The package is published as `control_plane` with
-`auto_install_allowed=true`, so routers can install it manually or through the
-existing auto-install path.
+subscription, selected nodes, manual domains, and settings. `v2.35-sb1137`
+fixes the operator manual-domain field under `Свой облачный список доменов`:
+domains added through the local field now survive `Apply`, page reload,
+`get_config`, raw settings, raw last payload, and generated config. The
+package is published as `control_plane` with `auto_install_allowed=true`, so
+routers can install it manually or through the existing auto-install path.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.34-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.35-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.34-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.35-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:
