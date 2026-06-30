@@ -1,15 +1,15 @@
 {
-  "schema": 1,
-  "channel": "stable",
-  "version": "v2.33-sb1137",
-  "min_supported_version": "v1.82-sb1137",
-  "compatibility": "sb1137",
-  "released_at": "2026-06-05T21:55:05Z",
-  "update_kind": "control_plane",
-  "restart_required": false,
-  "auto_install_allowed": true,
-  "package_url": "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.33-sb1137.tar.gz",
-  "package_sha256": "a00e47997311c2c3604bcdd025dc21db57d95bc80941ee374b2739a4a0e9b0b4",
-  "package_size": 95917,
-  "notes_url": "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.33-sb1137/notes.txt"
+    "schema":  1,
+    "channel":  "stable",
+    "version":  "v2.34-sb1137",
+    "min_supported_version":  "v1.82-sb1137",
+    "compatibility":  "sb1137",
+    "released_at":  "2026-06-30T10:27:49Z",
+    "update_kind":  "control_plane",
+    "restart_required":  false,
+    "auto_install_allowed":  true,
+    "package_url":  "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.34-sb1137.tar.gz",
+    "package_sha256":  "7ad1599f40e1490c1d90716bc554046fb679c61d7e4d7184f0d6f7767da1fe93",
+    "package_size":  95913,
+    "notes_url":  "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.34-sb1137/notes.txt"
 }

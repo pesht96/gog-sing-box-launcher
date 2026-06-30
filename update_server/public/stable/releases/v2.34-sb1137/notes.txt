@@ -1,0 +1,21 @@
+GOG Sing-Box Launcher v2.34-sb1137
+
+This update fixes the out-of-box YouTube helper-domain coverage in the
+ordinary sing-box baseline.
+
+The router already routed the main YouTube media families through the VPN path:
+youtube.com, youtu.be, youtube-nocookie.com, ytimg.com, googlevideo.com,
+youtubei.googleapis.com, youtube.googleapis.com, gstatic.com, googleapis.com,
+and ggpht.com. The missing piece was the broader googleusercontent.com helper
+family. Manual operator routing of that family was live-proved to improve
+YouTube loading, so v2.34 adds googleusercontent.com to the static YouTube
+service core and blocked/Re:filter fallback core.
+
+The package preserves each router's saved subscription, selected nodes, manual
+domains, route toggles, and update settings. It does not add provider nodes and
+does not emit wildcard literals such as *.googlevideo.com into sing-box
+domain_suffix rules, because base suffixes already cover subdomains.
+
+Update kind: control_plane
+Compatibility: sb1137
+Auto install allowed: true
