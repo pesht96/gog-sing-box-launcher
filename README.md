@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.37-sb1137`
+Current stable baseline: `v2.38-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.37-sb1137.tar.gz
-      gog-update-v2.37-sb1137.tar.gz.sha256
+      gog-update-v2.38-sb1137.tar.gz
+      gog-update-v2.38-sb1137.tar.gz.sha256
     releases/
-      v2.37-sb1137/
+      v2.38-sb1137/
         notes.txt
   xray/
     update.json
@@ -62,23 +62,24 @@ package still performs a bounded current-payload runtime reapply when GOG was
 already running before update.
 
 Current stable release note: this update preserves each router's saved
-subscription, selected nodes, manual domains, and settings. `v2.37-sb1137`
-fixes the selected-node drift between a freshly loaded provider preview and
-manual `Apply`: newly loaded selected nodes now survive into settings, payload,
-runtime config, and `Пинг` instead of being dropped by an old local raw cache.
+subscription, selected nodes, manual domains, and settings. `v2.38-sb1137`
+fixes weak-router endpoint DNS failures by using the router system resolver for
+sing-box `local-dns` instead of one hard-coded public UDP resolver. The bounded
+watchdog recovery remains enabled, while the existing IP-literal DoH
+`proxy-dns` path and selected-node persistence are preserved.
 The package is published as `control_plane` with `auto_install_allowed=true`,
 so routers can install it manually or through the existing auto-install path.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.37-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.38-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.37-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.38-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:

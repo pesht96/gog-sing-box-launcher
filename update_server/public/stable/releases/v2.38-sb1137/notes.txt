@@ -1,0 +1,13 @@
+GOG Sing-Box Launcher v2.38-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+Исправлена проблема слабых OpenWrt-роутеров, при которой endpoint-хосты VPN
+периодически не разрешались через один жёстко заданный UDP DNS resolver.
+Теперь sing-box использует системный DNS роутера для endpoint resolution,
+сохраняя существующий IP-literal DoH proxy-dns и bounded watchdog recovery.
+
+Пользовательские подписки, выбранные серверы, manual domains и настройки
+сохраняются. Перед публикацией версия проверена на live-router: sing-box check
+успешен, endpoint DNS отвечает, health/UI чистые, release stress 12/12.
