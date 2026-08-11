@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "channel": "stable",
-  "version": "v2.38-sb1137",
+  "version": "v2.39-sb1137",
   "min_supported_version": "v1.82-sb1137",
   "compatibility": "sb1137",
-  "released_at": "2026-08-05T19:12:18Z",
+  "released_at": "2026-08-11T18:16:59Z",
   "update_kind": "control_plane",
   "restart_required": false,
   "auto_install_allowed": true,
-  "package_url": "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.38-sb1137.tar.gz",
-  "package_sha256": "ca61afb54514a47a500414c5bdc100fba4683f28b8e9860bde122076b7b80081",
-  "package_size": 96830,
-  "notes_url": "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.38-sb1137/notes.txt"
+  "package_url": "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.39-sb1137.tar.gz",
+  "package_sha256": "4639ea5bc7e485338bf531e272604776be45d1a6c08a4854c3534e656d3add93",
+  "package_size": 96968,
+  "notes_url": "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.39-sb1137/notes.txt"
 }

@@ -1,0 +1,12 @@
+GOG Sing-Box Launcher v2.39-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+v2.39 fixes a weak-router DNS recursion that could stop all proxied services
+while sing-box and TUN still appeared alive. The router's own dnsmasq upstream
+DNS queries now bypass the TUN DNS hijack, so `local-dns` cannot loop back into
+the sing-box DNS endpoint and exhaust dnsmasq's concurrent-query limit.
+
+The update is control-plane-only. It preserves each router's saved
+subscription, selected nodes, manual domains, and routing settings.
