@@ -1,0 +1,14 @@
+GOG Sing-Box Launcher v2.44-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This package is generated for the remote update pipeline. Publish only after
+the router-side updater has passed the required verification gates.
+
+v2.44 fixes the weak-router runtime drift that could leave an already-running
+sing-box process on an old hostname-based configuration after installation.
+The installer reapplies the saved runtime once through the new DNS-safe code
+when GOG was running before the update. An intentionally stopped GOG remains
+stopped. User subscriptions, selected nodes, manual domains, and settings are
+preserved.
