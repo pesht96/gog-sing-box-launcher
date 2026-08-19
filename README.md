@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.44-sb1137`
+Current stable baseline: `v2.46-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.44-sb1137.tar.gz
-      gog-update-v2.44-sb1137.tar.gz.sha256
+      gog-update-v2.46-sb1137.tar.gz
+      gog-update-v2.46-sb1137.tar.gz.sha256
     releases/
-      v2.44-sb1137/
+      v2.46-sb1137/
         notes.txt
   xray/
     update.json
@@ -58,29 +58,29 @@ update_server/public/
 publishes a signed `control_plane` package for the `sb1137` compatibility line
 with `auto_install_allowed=true`, so it can be installed manually or by the
 existing auto-install path when the operator has auto-install enabled. The
-package still performs a bounded current-payload runtime reapply when GOG was
-already running before update.
+package does not run a nested current-payload CGI reapply while the updater
+holds its mutating lock.
 
 Current stable release note: this update preserves each router's saved
- subscription, selected nodes, manual domains, and settings. `v2.44-sb1137`
-fixes the weak-router endpoint DNS failure chain: it keeps the router-local DNS
-startup gate and endpoint normalization, and an in-place install reapplies the
-saved runtime through the new code instead of leaving an already-running
-sing-box process on the old hostname config. An intentionally stopped GOG
-remains stopped. The package is published as `control_plane` with
+ subscription, selected nodes, manual domains, and settings. `v2.46-sb1137`
+retains the v2.45 watchdog quality guard and fixes the weak-router OTA
+transaction: the package does not run a nested CGI/cron reapply while the
+updater holds the mutating lock. The already checked runtime remains live;
+normal maintenance or a later operator Apply rebuilds configuration with the
+new code. The package is published as `control_plane` with
 `auto_install_allowed=true`, so routers can install it manually or through the
 existing auto-install path.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.44-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.46-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.44-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.46-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:

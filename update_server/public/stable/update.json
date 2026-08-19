@@ -4,12 +4,12 @@
     "version":  "v2.46-sb1137",
     "min_supported_version":  "v1.82-sb1137",
     "compatibility":  "sb1137",
-    "released_at":  "2026-08-19T17:17:22Z",
+    "released_at":  "2026-08-19T17:26:44Z",
     "update_kind":  "control_plane",
     "restart_required":  false,
-    "auto_install_allowed":  false,
+    "auto_install_allowed":  true,
     "package_url":  "https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.46-sb1137.tar.gz",
-    "package_sha256":  "3aa59e00987788304152cd2ed98e4089102256d560243183a84a5adcc88f6715",
+    "package_sha256":  "2b1b74372b3c106791219760f7621cf497b0a21c4bc2fdd7657d110f682ccdd7",
     "package_size":  100430,
     "notes_url":  "https://gog-sing-box-launcher.pages.dev/stable/releases/v2.46-sb1137/notes.txt"
 }
