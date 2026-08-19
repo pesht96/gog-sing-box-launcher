@@ -1,0 +1,15 @@
+GOG Sing-Box Launcher v2.46-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This package is generated for the remote update pipeline. Publish only after
+the router-side updater has passed the required verification gates.
+
+This release fixes the weak-router OTA transaction. The updater no longer
+starts a nested CGI/cron reapply while its own update lock is held. The already
+verified runtime stays up during the code update, so a failed update cannot
+erase the saved source, selection, or runtime config through concurrent apply
+work. User subscriptions, selected nodes, manual domains, and settings are
+preserved. Runtime configuration refreshes through the normal next maintenance
+cycle or an operator Apply after the code update completes.
