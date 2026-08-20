@@ -1,0 +1,13 @@
+GOG Sing-Box Launcher v2.49-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+Fixes the weak-router LAN DNS loop that could leave TV, phones, VK, and other
+direct services without Internet while proxied services still worked. The new
+verified LAN DNS guard keeps dnsmasq upstream DNS outside the sing-box TUN DNS
+hijack after startup, firewall reload, and watchdog maintenance.
+
+This update preserves your subscription, selected nodes, manual domains, and
+settings. It contains only application/control-plane code and does not include
+VPN links or credentials.
