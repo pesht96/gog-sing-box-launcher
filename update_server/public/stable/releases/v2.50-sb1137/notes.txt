@@ -1,0 +1,14 @@
+GOG Sing-Box Launcher v2.50-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+This package is generated for the remote update pipeline. Publish only after
+the router-side updater has passed the required verification gates.
+
+This release preserves user subscriptions, selected nodes, manual domains, and
+settings. It carries only GOG application/control-plane code for the sb1137
+compatibility line. The updater does not run a nested CGI/cron reapply while
+its own update lock is held, so the OTA transaction cannot erase saved runtime
+state through concurrent apply work. Version-specific release notes are served
+from the signed manifest's notes URL.
