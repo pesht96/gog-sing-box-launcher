@@ -1,0 +1,25 @@
+GOG Sing-Box Launcher v2.52-sb1137
+
+Update kind: control_plane
+Compatibility: sb1137
+
+Startup health now uses a short, bounded YouTube 204 request rather than
+downloading a full page. Startup proxy repair reuses the bounded quality
+recovery path instead of running the full operator Ping/download action.
+
+Opening or reloading the web UI no longer invokes Ping, downloads test data,
+or changes the active AUTO-BALANCE selector. Explicit Ping remains available.
+Recent manual measurements may be shown from a five-minute browser cache.
+
+Regression proof: the pre-fix startup code fails the targeted fixture and the
+new code passes. Real HTTP Apply completed in 24.4 seconds. UI open plus two
+reloads made no latency/mutation requests and preserved the active selector,
+selected nodes, settings and running process. Control-plane stress passed 12/12.
+
+This application-only package preserves subscriptions, selected nodes, manual
+domains, routing settings and existing DNS guards. No private nodes or sources
+are bundled. Manual and opted-in automatic updates are supported.
+
+Scope: this is not a fix for external VPN-path throughput or regional service
+eligibility. Intermittent bulk-transfer degradation also reproduced without
+OpenWrt; sustained video playback is not claimed fixed by this release.

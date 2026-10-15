@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.49-sb1137`
+Current stable baseline: `v2.52-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.49-sb1137.tar.gz
-      gog-update-v2.49-sb1137.tar.gz.sha256
+      gog-update-v2.52-sb1137.tar.gz
+      gog-update-v2.52-sb1137.tar.gz.sha256
     releases/
-      v2.49-sb1137/
+      v2.52-sb1137/
         notes.txt
   xray/
     update.json
@@ -61,25 +61,25 @@ existing auto-install path when the operator has auto-install enabled. The
 package does not run a nested current-payload CGI reapply while the updater
 holds its mutating lock.
 
-Current stable release note: `v2.49-sb1137` fixes a live weak-router LAN DNS
-loop. A missing early output DNS bypass could make dnsmasq recursively send its
-own upstream queries into the sing-box TUN until direct services and captive
-portal checks failed. The new verified DNS guard is installed after every GOG
-start and is rechecked by watchdog without restarting the selected pool. The
-package preserves each router's saved subscription, selected nodes, manual
-domains, and settings. It is published as `control_plane` with
-`auto_install_allowed=true` for manual and automatic installation.
+Current stable release note: `v2.52-sb1137` bounds startup health checks and
+startup selector repair instead of running the full operator download test.
+Opening or reloading the UI no longer runs Ping or changes the active selector.
+Explicit Ping remains available; recent manual measurements may be displayed
+from a five-minute browser cache. Existing selected nodes, subscriptions,
+manual domains, routing and DNS policy are preserved. This is a control-plane
+fix, not a claim that provider-path throughput or regional eligibility is fixed.
+It supports manual and opted-in automatic installation.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.49-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.52-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.49-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.52-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:
