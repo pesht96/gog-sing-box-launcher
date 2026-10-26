@@ -1,0 +1,26 @@
+GOG Sing-Box Launcher v2.53-sb1137
+
+Automatic quality selection now also runs while the current node is reachable.
+The three-minute watchdog compares the active node and up to two rotating
+selected alternatives with short, bounded YouTube transfer samples.
+
+A switch requires two comparisons with at least 30 percent and 32768 B/s
+improvement, and a candidate throughput of at least 65536 B/s. Close scores
+retain the current node. Manual Ping remains available, has a three-minute
+grace period, and automatic decisions do not overwrite its saved preference.
+Operator actions take priority; a failed post-switch check restores the old
+member unless the operator intervened. Existing connections are not forcibly
+interrupted and sing-box is not restarted for quality selection.
+
+Active-node decisions and status now prefer the actual Clash selector, not
+the last outbound observation in the log. Opening the UI remains observational.
+
+Preserves each router's subscription, selected pool, manual domains, route and
+DNS policy. The package contains application code only, no operator VPN nodes
+or credentials. Signed control_plane update; manual and opted-in auto-install.
+
+Verified locally and on the live router, including real automatic handover,
+checkbox Apply/reload round-trip and sequential health/UI/12-pass stress.
+This is not a guarantee of external-node speed, country eligibility or
+uninterrupted multi-day video playback. Existing DNS saturation warnings remain
+a separate investigation, not claimed fixed by this release.

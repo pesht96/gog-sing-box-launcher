@@ -6,7 +6,7 @@ This repository is prepared for Cloudflare Pages static hosting. Routers should
 not use the GitHub API for routine update checks. They should download the
 small static manifest from the Cloudflare Pages endpoint instead.
 
-Current stable baseline: `v2.52-sb1137`
+Current stable baseline: `v2.53-sb1137`
 
 ## Cloudflare Pages
 
@@ -41,10 +41,10 @@ update_server/public/
     update.json.sig
     packages/
       .gitkeep
-      gog-update-v2.52-sb1137.tar.gz
-      gog-update-v2.52-sb1137.tar.gz.sha256
+      gog-update-v2.53-sb1137.tar.gz
+      gog-update-v2.53-sb1137.tar.gz.sha256
     releases/
-      v2.52-sb1137/
+      v2.53-sb1137/
         notes.txt
   xray/
     update.json
@@ -61,25 +61,26 @@ existing auto-install path when the operator has auto-install enabled. The
 package does not run a nested current-payload CGI reapply while the updater
 holds its mutating lock.
 
-Current stable release note: `v2.52-sb1137` bounds startup health checks and
-startup selector repair instead of running the full operator download test.
-Opening or reloading the UI no longer runs Ping or changes the active selector.
-Explicit Ping remains available; recent manual measurements may be displayed
-from a five-minute browser cache. Existing selected nodes, subscriptions,
-manual domains, routing and DNS policy are preserved. This is a control-plane
-fix, not a claim that provider-path throughput or regional eligibility is fixed.
-It supports manual and opted-in automatic installation.
+Current stable release note: `v2.53-sb1137` adds bounded proactive quality
+selection to the healthy watchdog path. Every three minutes it compares the
+active member with up to two rotating selected alternatives. A switch requires
+two measurements showing at least 30 percent and 32768 B/s improvement, with a
+65536 B/s candidate floor. Manual Ping remains available and takes priority;
+UI opening stays observational. Failed post-switch liveness restores the old
+member unless the operator intervened. Subscriptions, selected nodes, manual
+domains, routing and DNS are preserved. This is not a claim that provider-path
+throughput, regional eligibility or all video buffering is fixed.
 
 Current stable package:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.52-sb1137.tar.gz
+https://gog-sing-box-launcher.pages.dev/stable/packages/gog-update-v2.53-sb1137.tar.gz
 ```
 
 Current stable notes:
 
 ```text
-https://gog-sing-box-launcher.pages.dev/stable/releases/v2.52-sb1137/notes.txt
+https://gog-sing-box-launcher.pages.dev/stable/releases/v2.53-sb1137/notes.txt
 ```
 
 Migrated Xray-only routers continue on:
