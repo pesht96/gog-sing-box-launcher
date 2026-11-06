@@ -1,0 +1,1 @@
+Isolated v2.14 automatic-install trial for the experimental router. Version-only change from v2.13. Not advertised by the public default manifest. No core/config/subscription changes. Preserve live diagnostic log override.

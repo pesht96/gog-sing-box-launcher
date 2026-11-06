@@ -1,0 +1,15 @@
+{
+    "schema":  1,
+    "channel":  "xray",
+    "version":  "v2.14-xray-only",
+    "min_supported_version":  "v2.10-xray-only",
+    "compatibility":  "xray-only",
+    "released_at":  "2026-11-06T20:15:45Z",
+    "update_kind":  "control_plane",
+    "restart_required":  false,
+    "auto_install_allowed":  true,
+    "package_url":  "https://gog-sing-box-launcher.pages.dev/xray/packages/gog-update-v2.14-xray-only-control-plane.tar.gz",
+    "package_sha256":  "07e7099e2ef14c3cd6f74e43d89e6507ac45da130cbca8224aa39d3adff74eaf",
+    "package_size":  85682,
+    "notes_url":  "https://gog-sing-box-launcher.pages.dev/xray/releases/v2.14-xray-only/notes.txt"
+}
