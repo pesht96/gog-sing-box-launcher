@@ -1,0 +1,1 @@
+Manual Xray-only control-plane trial v2.11. Requires Xray 26.10.31+. Updates UI/CGI only; preserves runtime, subscriptions, routing and settings. Adds stage progress and confirmed bulk review. Dependency candidates are guesses, not automatic routing. WebSocket warnings require provider action, not forced transport conversion. Weak-router qualification pending.
