@@ -1,15 +1,15 @@
 {
     "schema":  1,
     "channel":  "xray",
-    "version":  "v2.11-xray-only",
+    "version":  "v2.13-xray-only",
     "min_supported_version":  "v2.10-xray-only",
     "compatibility":  "xray-only",
-    "released_at":  "2026-11-06T19:21:34Z",
+    "released_at":  "2026-11-06T20:04:56Z",
     "update_kind":  "control_plane",
     "restart_required":  false,
     "auto_install_allowed":  false,
-    "package_url":  "https://gog-sing-box-launcher.pages.dev/xray/packages/gog-update-v2.11-xray-only-control-plane.tar.gz",
-    "package_sha256":  "690d03dbf89afea6c544b14c8885e3e0cdfaa7f218ff4a3e71ae8ab9c6a89be5",
-    "package_size":  84525,
-    "notes_url":  "https://gog-sing-box-launcher.pages.dev/xray/releases/v2.11-xray-only/notes.txt"
+    "package_url":  "https://gog-sing-box-launcher.pages.dev/xray/packages/gog-update-v2.13-xray-only-control-plane.tar.gz",
+    "package_sha256":  "cadb2fcde67294ec779b008607fdb098a146c8e7a7581f862ecf0e3a2b23a040",
+    "package_size":  85822,
+    "notes_url":  "https://gog-sing-box-launcher.pages.dev/xray/releases/v2.13-xray-only/notes.txt"
 }
